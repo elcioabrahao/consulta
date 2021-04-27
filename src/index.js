@@ -35,8 +35,7 @@ app.post("/eventos", (req, res) => {
 });
 app.listen(6000, async () => {
     console.log("Consultas. Porta 6000");
-    const resp = await
-    axios.get("http://localhost:10000/eventos")
+    const resp = await axios.get("http://192.168.16.1:10000/eventos")
         .catch((err) => {
             console.log("err", err);
         });
